@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cenicienta de Jorge Volpi - Hipermedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { 
+            font-family: 'Georgia', serif; 
+            background: #18171c; 
+            color: #eee; 
+            margin: 0; 
+            padding: 0;
+            min-height: 100vh;
+        }
+        header, footer {
+            background: #2c2936;
+            color: #fff;
+            text-align: center;
+            padding: 1.2em 0;
+        }
+        main {
+            max-width: 700px;
+            margin: 2em auto;
+            background: #23212b;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px #0006;
+            padding: 2em;
+        }
+
+        
+        section {
+            display: none;
+            animation: fadein 0.7s;
+        }
+        section.active {
+            display: block;
+        }
+        @keyframes fadein {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: none;}
+        }
+        .choice-links {
+            margin: 1.5em 0;
+        }
+        .choice-links a {
+            color: #f3a6a6;
+            text-decoration: underline;
+            margin-right: 1em;
+        }
+        blockquote {
+            color: #aad8d3;
+            background: #14131a;
+            border-left: 3px solid #aad8d3;
+            margin: 1.5em 0;
+            padding: 1em 2em;
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+            main { padding: 1em; }
+            nav { flex-direction: column; align-items: center;}
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <h1>Cenicienta de Jorge Volpi </h1>
+    <p>Una experiencia hipermedia inspirada en la obra "Oscuro bosque Oscuro"</p>
+</header>
+<main>
+
+    <section id="home" class="active">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        
+        <div style="text-align: center;" >
+            <a href="#recuerdos" onclick="showSection('recuerdos');return false;" style="color: white;">Empezar lectura</a>
+        </div>
+    </section>
+
+    
+
+    <section id="recuerdos">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>El inicio del  fin</h2>
+        <p>Jon Guridien se encontraba exhausto tras un día lleno de exterminar insectos por orden del capitán y otros por decisión 
+            propia. Se había dado cuenta que disfrutaba del sonido que hacía su bayoneta al disparar. 
+            Tal acción lo llenaba de tanto éxtasis que se había convertido en la parte favorita de su día a día. 
+            Pero lastimosamente para Jon Guridien su actividad favorita había culminado</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#carpaDescanso" onclick="showSection('carpaDescanso');return false;" style="color: red;">Entrar en la carpa y descansar</a>
+            <a href="#SalirCaminar" onclick="showSection('SalirCaminar');return false;" style="color: red;">Salir a caminar por el bosque</a>
+        </div>
+
+    </section>
+
+    <section id="SalirCaminar">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Salir a caminar por el bosque</h2>
+        <p>zzzzzzzz</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#EntrarCastillo" onclick="showSection('EntrarCastillo');return false;" style="color: red;">Entrar al castillo</a>
+            <a href="#NoEntrar" onclick="showSection('NoEntrar');return false;" style="color: red;">No entrar al castillo</a>
+        </div>
+    </section>
+
+    <section id="NoEntrar">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>No entrar al castillo</h2>
+        <p>zzzzzzzz</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#TocarPuerta" onclick="showSection('TocarPuerta');return false;" style="color: red;">Tocar la puerta de aquella casa</a>
+            <a href="#Explorar" onclick="showSection('Explorar');return false;" style="color: red;">Explorar el pueblo</a>
+        </div>
+    </section>
+
+    <section id="Explorar">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Explorar el pueblo</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    <section id="TocarPuerta">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Tocar la puerta de aquella casa</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    <section id="EntrarCastillo">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Entrar al castillo</h2>
+        <p>zzzzzzzz</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#BuscarCeni" onclick="showSection('BuscarCeni');return false;" style="color: red;">Buscar a Cenicienta</a>
+            <a href="#PermaBaile" onclick="showSection('PermaBaile');return false;" style="color: red;">Permanecer en el baile</a>
+        </div>
+    </section>
+
+    <section id="PermaBaile">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Permanecer en el baile</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    <section id="BuscarCeni">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Buscar a Cenicienta</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+
+    <section id="carpaDescanso">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Entrar a la carpa a descansar</h2>
+        <p>Se acostó y de repente tuvo una lluvia de recuerdos de su vida pasada, por su mente pasó su amada 
+            esposa, sus dos hijas y su hijastra. Una lágrima de felicidad comenzó a recorrer su mejilla cuando 
+            todos esos agradables recuerdos empezaron a nublarse. Ahora solo venía a su mente muerte, 
+            violencia y aquellos tres insectos que había encontrado escondidos en un armario. 
+            Recordaba la tierna escena que pudo deslumbrar de aquellos niños. El hermano mayor sostenía a la 
+            más pequeña que leía el cuento de la Cenicienta en voz baja, casi imperceptible, mientras que el 
+            otro hermano se encontraba dormido. Luego de verlos por un momento sintió que su bayoneta le 
+            hablaba y decidió dispararles. Esto hizo que volviera a abrir los ojos un poco asustado.</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#LavarCara" onclick="showSection('LavarCara');return false;" style="color: red;">Lavarse la cara y buscar dormir</a>
+            <a href="#SalirCarpa" onclick="showSection('SalirCarpa');return false;" style="color: red;">Salir de la carpa a tomar aire</a>
+        </div>
+    </section>
+
+    <section id="SalirCarpa">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Salir de la carpa a tomar aire</h2>
+        <p>zzzzzzzz</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#Tiempo" onclick="showSection('Tiempo');return false;" style="color: red;">El tiempo se acaba</a>
+            <a href="#Desaparicion" onclick="showSection('Desaparicion');return false;" style="color: red;">La desaparición y obseción</a>
+        </div>
+    </section>
+
+    <section id="Desaparicion">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>La desaparición y obseción</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    <section id="Tiempo">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>El tiempo se acaba</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    <section id="LavarCara">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Lavarse la cara y buscar dormir</h2>
+        <p>Después de hacerlo se volvió a acostar sin éxito. Cada vez que cerraba sus ojos la imagen de la niña 
+            leyendo Cenicienta se volvía más nítida. Era como si la historia lo llamara desde algún rincón de su mente, 
+            uno al que no se atrevía a mirar. Estaba mirando el techo de la carpa cuando de pronto escuchó unos pasos 
+            ligeros acercarse. Intentó levantarse y un escalofrío intenso recorrió todo su cuerpo. De pronto escuchó una 
+            sutil voz infantil susurrar: -Y entonces, Cenicienta se escondió con sus zapatillas de cristal… Era la misma 
+            voz que había oído antes del disparo. Jon Guridien agarró su bayoneta, se armó de valor y salió rápidamente 
+            de la tienda atento al más mínimo movimiento pero todo se encontraba en silencio.</p>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <a href="#IgnorarVoz" onclick="showSection('IgnorarVoz');return false;" style="color: red;">Ignorar la voz e intentar dormir</a>
+            <a href="#SalirVoz" onclick="showSection('SalirVoz');return false;" style="color: red;">Salir en busca de aquella voz</a>
+        </div>
+    </section>
+
+    <section id="IgnorarVoz">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Ignorar la voz e intentar dormir</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    <section id="SalirVoz">
+        <div style="text-align: center;">
+            <img src="Imagen/portada.jpeg" alt="Descripción de la imagen">
+        </div>
+        <h2>Salir en busca de aquella voz</h2>
+        <p>zzzzzzzzzzzzzzzzzzzzzzz.</p>
+
+        <div style="text-align: center;" >
+            <a href="#home" onclick="showSection('home');return false;" style="color: white;">Volver al inicio</a>
+        </div>
+    </section>
+
+    
+</main>
+<footer>
+    <p>&copy; 2025 Inspirado en "Cenicienta" de Jorge Volpi | Integrantes: Augusto Armijos, Elvis Cueva, Ignacio Gonzaga, Maribel Ramón, Nelly Ochoa</p>
+</footer>
+<script>
+function showSection(id) {
+    document.querySelectorAll('section').forEach(
+        section => section.classList.remove('active')
+    );
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+window.addEventListener('DOMContentLoaded', () => {
+    // Navegación por hash en URL
+    const hash = window.location.hash.replace('#','');
+    if(hash && document.getElementById(hash)) showSection(hash);
+});
+</script>
+
+</body>
+</html>
